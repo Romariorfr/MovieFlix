@@ -13,9 +13,9 @@ import com.devsuperior.movieflix.repositories.UserRepository;
 
 @Service
 public class UserService implements UserDetailsService {
-	
+
 	private static Logger logger = LoggerFactory.getLogger(UserService.class);
-	
+
 	@Autowired
 	private UserRepository repository;
 

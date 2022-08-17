@@ -3,6 +3,8 @@ package com.devsuperior.movieflix.dto;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.devsuperior.movieflix.entities.User;
+
 public class UserDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -15,10 +17,15 @@ public class UserDTO implements Serializable {
 	}
 
 	public UserDTO(Long id, String name, String email) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
+	}
+
+	public UserDTO(User entity) {
+		this.id = entity.getId();
+		this.name = entity.getName();
+		this.email = entity.getEmail();
 	}
 
 	public Long getId() {
